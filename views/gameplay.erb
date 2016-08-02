@@ -3,6 +3,7 @@
 	<p>Guesses: <%= 7 - game.guesses %></p>
 	<h1><%= game.completed_string.join(' ') %></h1>
 	<% if game.completed_string == game.word %>
+		<p>Word: <%= game.word.join('') %></p>
 		<p>You've Won!</p>
 		<% break %>
 	<% else %>
@@ -21,7 +22,7 @@
 	<!--<p><a href="/save">Save Game</a></p>-->
 	<p><a href="/">Quit Game</a></p>
 <% else %>
-	<p><%= game.word.join('') %></p>
+	<p>Word: <%= game.word.join('') %></p>
 	<p>You've Lost!</p>
 	<p><a href="/reset">Play new Game</a></p>
 <% end %>
