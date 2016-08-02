@@ -1,0 +1,9 @@
+<h1>Load a Game</h1>
+<% saves = Dir.entries("saves") %>
+<% saves.each do |save| %>
+	<% if save == '.' || save == '..' %>
+		<% next %>
+	<% else %>
+		<p><a href="/load?save=<%= save %>"><%= save %></p>
+	<% end %>
+<% end %>

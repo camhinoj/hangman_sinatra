@@ -1,0 +1,13 @@
+<h1>Final Guess</h1>
+<% if win == "" %>
+	<form method='get'>
+		Enter your last guess (and hit Return):<br />
+		<input type="text" name="final_guess"/>
+	</form>
+<% elsif win %>
+	<p>You've Won!</p>
+	<p><a href= "/">Return</a></p>
+<% else %>
+	<p>You've Lost!</p>
+	<p><a href= "/">Return</a></p>
+<% end %>

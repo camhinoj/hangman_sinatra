@@ -1,0 +1,27 @@
+<h1>Hangman</h1>
+<% if game.guesses <= 7 %>
+	<p>Guesses: <%= 7 - game.guesses %></p>
+	<h1><%= game.completed_string.join(' ') %></h1>
+	<% if game.completed_string == game.word %>
+		<p>You've Won!</p>
+		<% break %>
+	<% else %>
+		<% if message != "" %>
+			<p><%= message %></p>
+		<% end %>
+		<form method='get'>
+			Guess a Letter (and hit Return):<br />
+			<input type="text" name="player_input" />
+		</form>
+	<% end %>
+	<h1><%= game.bad_letters.join(' ') %></h1>
+	<form method='get'>
+		<input type='submit' name='final_guess' value='Final Guess' />
+	</form>
+	<p><a href="/save">Save Game</a></p>
+	<p><a href="/">Quit Game</a></p>
+<% else %>
+	<p><%= game.word.join('') %></p>
+	<p>You've Lost!</p>
+	<p><a href="/reset">Play new Game</a></p>
+<% end %>

@@ -1,0 +1,33 @@
+body {
+	background: #EEE;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	text-align: center;
+	color: #555;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+p {
+	text-align: center;
+}
+
+form {
+	text-align: center;
+}
+
+input {
+	margin-top: 10px;
+	background-color: #EFF;
+	border-radius: 4px;
+}
+
+a:hover {
+	color: #a9b2b9;
+}
+a {
+	text-decoration:none;
+	color: #648880;
+}
