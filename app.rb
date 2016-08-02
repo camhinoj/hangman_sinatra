@@ -52,7 +52,7 @@ get '/final_guess' do
 	else
 		win = false
 	end
-	erb :final_guess, :locals => {:win => win}
+	erb :final_guess, :locals => {:win => win, :game => game}
 end
 
 def letter?(input)
