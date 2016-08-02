@@ -11,9 +11,9 @@ end
 
 get '/game' do
 	game.new_word if game.word == []
-	if game.completed_string == game.word
-		redirect to('/win')
-	end
+	# if game.completed_string == game.word
+	# 	redirect to('/win')
+	# end
 	if params[:final_guess] != nil
 		redirect to('/final_guess')
 	end
@@ -58,9 +58,9 @@ get '/final_guess' do
 	erb :final_guess, :locals => {:win => win, :game => game}
 end
 
-get '/win' do
-	erb :final_guess, :locals => {:win => true, :game => game}
-end
+# get '/win' do
+# 	erb :final_guess, :locals => {:win => true, :game => game}
+# end
 
 
 def letter?(input)
