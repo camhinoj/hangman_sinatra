@@ -5,9 +5,11 @@
 		<input type="text" name="final_guess"/>
 	</form>
 <% elsif win %>
+	<p><%= game.word.join('') %></p>
 	<p>You've Won!</p>
 	<p><a href= "/">Return</a></p>
 <% else %>
+	<p><%= game.word.join('') %></p>
 	<p>You've Lost!</p>
 	<p><a href= "/">Return</a></p>
 <% end %>
