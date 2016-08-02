@@ -28,12 +28,12 @@ class Hangman
 
 	def guess(input)
 		input = input.downcase
-		@guesses += 1
 		if @word.include?(input)
 			@word.each_with_index do |letter, index|
 				@completed_string[index] = input if letter == input
 			end
 		else
+			@guesses += 1
 			@bad_letters << input
 		end
 	end
