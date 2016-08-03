@@ -1,9 +1,12 @@
 <h1>Hangman</h1>
+<%= game.word.join('') %>
 <% if game.completed_string == game.word %>
+	<img src="img/<%= game.guesses %>.png" alt="Hangman" width="200" height="150">
 	<p>Word: <%= game.word.join('') %></p>
 	<p>You've Won!</p>
 	<p><a href="/reset">Play new Game</a></p>
 <% elsif game.guesses <= 6 %>
+	<img src="img/<%= game.guesses %>.png" alt="Hangman" width="200" height="150">
 	<p>Guesses: <%= 7 - game.guesses %></p>
 	<h1><%= game.completed_string.join(' ') %></h1>
 	<% if message != "" %>
@@ -20,6 +23,7 @@
 	<!--<p><a href="/save">Save Game</a></p>-->
 	<p><a href="/">Quit Game</a></p>
 <% else %>
+	<img src="img/<%= game.guesses-1 %>.png" alt="Hangman" width="200" height="150">
 	<p>Word: <%= game.word.join('') %></p>
 	<p>You've Lost!</p>
 	<p><a href="/reset">Play new Game</a></p>

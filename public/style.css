@@ -1,6 +1,11 @@
 body {
-	background: #EEE;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 h1 {
