@@ -1,4 +1,5 @@
 <h1>Hangman</h1>
+<%= game.word.join('') %>
 <% if game.completed_string == game.word %>
 	<img src="img/<%= game.guesses-1 %>.png" alt="Hangman" width="200" height="150">
 	<p>Word: <%= game.word.join('') %></p>
