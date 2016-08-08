@@ -1,7 +1,6 @@
 class Hangman
 
-	attr_accessor :guesses
-	attr_reader :word, :completed_string, :bad_letters
+	attr_accessor :guesses, :word, :completed_string, :bad_letters
 
 	def initialize
 		@dictionary = File.readlines("assets/5desk.txt").map { |word| word.strip.downcase }
